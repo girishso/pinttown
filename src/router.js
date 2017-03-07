@@ -7,11 +7,12 @@ import MainLayout from './components/layouts/main-layout';
 // Pages
 import Home from './components/home';
 import ProjectContainer from './components/containers/project-container';
+import ProjectsListContainer from './components/containers/projects-list-container';
 
 export default (
   <Router history={browserHistory}>
     <Route component={MainLayout}>
-      <Route path="/" component={Home} />
+      <Route path="/" component={ProjectsListContainer} />
       <Route path="projects" >
         <Route path=":project_id" component={ProjectContainer} />
       </Route>

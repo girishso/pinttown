@@ -8,10 +8,10 @@ export default function(props) {
       <div>
         <div className="ui fixed inverted menu">
           <div className="ui container">
-            <a href="#" className="header item" rel="noreferrer">
+            <a href="/" className="header item" rel="noreferrer">
               Pint Town
             </a>
-            <a href="#" className="item" rel="noreferrer">Home</a>
+            <a href="/" className="item" rel="noreferrer">Home</a>
             <div className="ui simple dropdown item">
               Discover <i className="dropdown icon"></i>
               <div className="menu inverted">
@@ -21,7 +21,7 @@ export default function(props) {
             </div>
           </div>
         </div>
-        <div className="ui segment">
+        <div className="">
           <NotificationContainer />
           {props.children}
         </div>

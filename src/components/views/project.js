@@ -2,6 +2,12 @@ import React from 'react';
 import Sidebar from './sidebar'
 import CommentsContainer from '../containers/comments-container'
 
+const getModuleMarkup = (module) => {
+  if(module.type === 'image')
+    return (<img className="ui fluid image" src={module.src} />)
+  else
+    return (<div>{ module.text_plain }</div>)
+}
 
 // Using "Stateless Functional Components"
 export default function(props) {
@@ -57,9 +63,3 @@ export default function(props) {
     </div> )
 }
 
-const getModuleMarkup = (module) => {
-  if(module.type === 'image')
-    return (<img className="ui fluid image" src={module.src} />)
-  else
-    return (<div>{module.text_plain}</div>)
-}

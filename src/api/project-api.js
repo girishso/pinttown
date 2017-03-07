@@ -1,7 +1,7 @@
 import axios from 'axios';
 import store from '../store';
 // import be from './be';
-import { getProjectSuccess, getCommentsSuccess } from '../actions/project-actions';
+import { getProjectSuccess, getCommentsSuccess, getProjectsListSuccess } from '../actions/project-actions';
 import { showErrorNotification, showSuccessNotification } from '../actions/notification-actions';
 
 // Add a response interceptor
@@ -25,6 +25,14 @@ export function getProject(project_id) {
   return axios.get(`${API_ROOT}/projects/${project_id}?client_id=${client_id}`)
     .then(response => {
       store.dispatch(getProjectSuccess(response.data));
+      return response;
+    });
+}
+
+export function getProjectsList() {
+  return axios.get(`${API_ROOT}/projects?client_id=${client_id}`)
+    .then(response => {
+      store.dispatch(getProjectsListSuccess(response.data));
       return response;
     });
 }

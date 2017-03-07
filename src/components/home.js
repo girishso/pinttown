@@ -1,9 +1,11 @@
 import React from 'react';
+import ProjectsList from './views/projects-list';
 
 const Home = React.createClass({
   render: function() {
     return (
-      <h1>Home Page</h1>
+      <ProjectsList />
+
     );
   }
 });
