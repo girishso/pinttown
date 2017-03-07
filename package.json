@@ -2,9 +2,11 @@
   "name": "pint-town",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://girishso.github.io/pinttown",
   "devDependencies": {
     "axios": "^0.9.1",
     "es6-promise": "^4.0.5",
+    "gh-pages": "^0.12.0",
     "react-scripts": "0.8.4"
   },
   "dependencies": {
@@ -23,6 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "api-project": "json-server --watch db.json --port 3004"
+    "api-project": "json-server --watch db.json --port 3004",
+    "deploy": "npm run build && gh-pages -d build"
   }
 }
