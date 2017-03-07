@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from './sidebar'
-import Comments from './comments'
+import CommentsContainer from '../containers/comments-container'
+
 
 // Using "Stateless Functional Components"
 export default function(props) {
@@ -25,8 +26,8 @@ export default function(props) {
             </div>
             <div className="ui divider"></div>
           </div>
-      )
-  })
+      )})
+
   return (
     <div className="pusher">
       <div className="ui vertical stripe segment">
@@ -48,7 +49,7 @@ export default function(props) {
           </div>
           <div className="row">
             <div className="column">
-              <Comments />
+              <CommentsContainer project_id={props.project_id} />
             </div>
           </div>
         </div>

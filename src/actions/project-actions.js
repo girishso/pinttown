@@ -6,3 +6,10 @@ export function getProjectSuccess(project) {
     project
   };
 }
+
+export function getCommentsSuccess(comments) {
+  return {
+    type: types.GET_COMMENTS_SUCCESS,
+    comments
+  };
+}

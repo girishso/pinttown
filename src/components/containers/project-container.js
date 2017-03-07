@@ -12,7 +12,7 @@ const ProjectContainer = React.createClass({
 
   render: function() {
     return (
-      <Project {...this.props.project} />
+      <Project project_id={this.props.params.project_id} {...this.props.project} />
     );
   }
 
