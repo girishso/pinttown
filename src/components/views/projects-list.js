@@ -6,7 +6,7 @@ const render_a_project = project => {
     <div key={project.id} className="card">
 
         <div className="image">
-          <img src={ project.covers['230'] } />
+          <img alt='' src={ project.covers['230'] } />
         </div>
       <div className="content">
         <div className="header">

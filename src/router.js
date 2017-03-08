@@ -1,11 +1,10 @@
 import React from 'react';
-import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 
 // Layouts
 import MainLayout from './components/layouts/main-layout';
 
 // Pages
-import Home from './components/home';
 import ProjectContainer from './components/containers/project-container';
 import ProjectsListContainer from './components/containers/projects-list-container';
 

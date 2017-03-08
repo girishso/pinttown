@@ -2,16 +2,16 @@ import React from 'react';
 import Sidebar from './sidebar'
 import CommentsContainer from '../containers/comments-container'
 
-const getModuleMarkup = (module) => {
-  if(module.type === 'image')
-    return (<img className="ui fluid image" src={module.src} />)
+const getModuleMarkup = (mod) => {
+  if(mod.type === 'image')
+    return (<img alt='' className="ui fluid image" src={mod.src} />)
   else
-    return (<div>{ module.text_plain }</div>)
+    return (<div>{ mod.text_plain }</div>)
 }
 
 // Using "Stateless Functional Components"
-export default function(props) {
-  if(typeof props.modules === 'undefined') {
+const Project = function(props) {
+  if(props.modules.length === 0) {
     return (
         <div className="ui segment load">
           <div className="ui active inverted dimmer">
@@ -24,11 +24,11 @@ export default function(props) {
       );
   }
 
-  const modules = props.modules.map((module, ix) => {
+  const render_modules = props.modules.map((mod, ix) => {
     return (
           <div key={ix}>
             <div className="ui fluid">
-              { getModuleMarkup(module) }
+              { getModuleMarkup(mod) }
             </div>
             <div className="ui divider"></div>
           </div>
@@ -41,7 +41,7 @@ export default function(props) {
           <div className="row main">
             <div className="eleven wide column">
               <div className="ui segment">
-                {modules}
+                {render_modules}
               </div>
             </div>
             <div className="five wide column sb">
@@ -63,3 +63,15 @@ export default function(props) {
     </div> )
 }
 
+Project.defaultProps = {
+    project_id: 1,
+    modules: [],
+    fields: [],
+    published_on: 1488953165,
+    owners: [{
+        images: {50: ''},
+        display_name: ''
+      }]
+};
+
+export default Project;

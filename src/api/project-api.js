@@ -2,7 +2,7 @@ import axios from 'axios';
 import store from '../store';
 // import be from './be';
 import { getProjectSuccess, getCommentsSuccess, getProjectsListSuccess } from '../actions/project-actions';
-import { showErrorNotification, showSuccessNotification } from '../actions/notification-actions';
+import { showErrorNotification  } from '../actions/notification-actions';
 
 // Add a response interceptor
 axios.interceptors.response.use(function (response) {

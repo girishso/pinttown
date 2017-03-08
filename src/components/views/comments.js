@@ -1,10 +1,11 @@
 import React from 'react';
+import {ObjectValues} from '../../utils/helpers'
 import timeago from 'timeago.js';
 
 const render_a_comment = comment => {
    return (<div key={comment.id} className="comment">
           <a className="avatar" rel="noreferrer">
-            <img src={Object.values(comment.user.images)[0]} />
+            <img alt={comment.user.display_name} src={ObjectValues(comment.user.images)[0]} />
           </a>
           <div className="content">
             <a className="author" rel="noreferrer">{comment.user.display_name}</a>
@@ -15,6 +16,7 @@ const render_a_comment = comment => {
               {comment.comment}
             </div>
             <div className="actions">
+              &nbsp;
             </div>
           </div>
         </div>)

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import NotificationContainer from '../containers/notification-container';
 
 // Using "Stateless Functional Components"
