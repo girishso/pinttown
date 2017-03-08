@@ -2,7 +2,7 @@
   "name": "pint-town",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://girishso.github.io/pinttown",
+  "homepage": "http://girishso.github.io",
   "devDependencies": {
     "axios": "^0.9.1",
     "es6-promise": "^4.0.5",
