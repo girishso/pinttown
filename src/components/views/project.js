@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidebar from './sidebar'
+import Loading from './loading'
 import CommentsContainer from '../containers/comments-container'
 
 const getModuleMarkup = (mod) => {
@@ -10,17 +11,10 @@ const getModuleMarkup = (mod) => {
 }
 
 // Using "Stateless Functional Components"
-const Project = function(props) {
+const Project = (props) => {
   if(props.modules.length === 0) {
     return (
-        <div className="ui segment load">
-          <div className="ui active inverted dimmer">
-            <div className="ui massive text loader">Loading</div>
-          </div>
-          <p></p>
-          <p></p>
-          <p></p>
-        </div>
+        <Loading />
       );
   }
 

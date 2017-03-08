@@ -9,7 +9,7 @@ const render_fields = (fields) => {
 }
 
 // Using "Stateless Functional Components"
-const Sidebar = function(props) {
+const Sidebar = (props) => {
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   const published = new Date(props.published_on * 1000);
   const owner = props.owners[0];

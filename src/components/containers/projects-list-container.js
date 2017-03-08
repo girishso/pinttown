@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProjectsList from '../views/projects-list';
+import Loading from '../views/loading'
 import * as projectApi from '../../api/project-api';
 
 const ProjectsListContainer = React.createClass({
@@ -11,16 +12,7 @@ const ProjectsListContainer = React.createClass({
 
   render: function() {
     if(this.props.projects.length === 0) {
-      return (
-          <div className="ui segment load">
-            <div className="ui active inverted dimmer">
-              <div className="ui massive text loader">Loading</div>
-            </div>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-        );
+      return <Loading />;
     }
 
     return (

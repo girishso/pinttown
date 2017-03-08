@@ -25,7 +25,7 @@ const render_a_comment = comment => {
 const render_comments = comments => comments.map(comment => render_a_comment(comment));
 
 // Using "Stateless Functional Components"
-export default function(props) {
+export default (props) => {
   return(
       <div className="ui segment">
         <h2>Comments ({props.comments.length})</h2>

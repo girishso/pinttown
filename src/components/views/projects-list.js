@@ -36,7 +36,7 @@ const render_a_project = project => {
 
 const render_projects_list = projects => projects.map( project => render_a_project(project) )
 
-export default function(props) {
+export default (props) => {
   return(
     <div className="row main">
     <div className="ui container grid home-main">
