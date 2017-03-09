@@ -1,7 +1,6 @@
-
+Trial project using Behance API
 
 ```
-run rails on port 3002
 yarn
 yarn start
 ```
